@@ -40,7 +40,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar:
+avatar: http://ogor5qhr9.bkt.clouddn.com/my_icon.jpg
 
 #是否开启分享
 share_jia: true
