@@ -16,7 +16,7 @@ tags:
 
 对于全集 $\mathrm N$ 给定两个子集$\mathrm A$和$\mathrm B$，以及一个由 $\mathrm N$ 映射到 $\mathrm N$ 的并满足复合封闭性的函数集合 $F$，如果满足
 \[
-\exits f in F. \forall x in \mathrm N.~x\in \mathrm A \Longleftrightarrow f(x) \in \mathrm B
+\exists f \in F. \forall x in \mathrm N.~x\in \mathrm A \Longleftrightarrow f(x) \in \mathrm B
 \]
 记作 $\mathrm A \le_F \mathrm B$
 
