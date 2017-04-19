@@ -4,6 +4,10 @@ date: 2017-04-08 10:24:18
 tags:
 ---
 
+计算复杂性理论基础介绍，看看就行，不需要作深入研究。
+
+<!--more-->
+
 # 第一章：
 
 # 第二章：
@@ -16,7 +20,7 @@ tags:
 
 对于全集 $\mathrm N$ 给定两个子集$\mathrm A$和$\mathrm B$，以及一个由 $\mathrm N$ 映射到 $\mathrm N$ 的并满足**复合封闭性**的函数集合 $F$，如果满足
 \[
-\exists f \in F.~~\forall x \in \mathrm N.~~x\in \mathrm A \Longleftrightarrow f(x) \in \mathrm B
+\exists f \in F.~\forall x \in \mathrm N.~x\in \mathrm A \Longleftrightarrow f(x) \in \mathrm B
 \]
 记作 $\mathrm A \le_F \mathrm B$
 

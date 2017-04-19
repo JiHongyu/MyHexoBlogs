@@ -4,11 +4,31 @@ date: 2017-01-04 08:56:49
 tags: [git]
 ---
 
-# 前言
-
 Git 是牛逼的软件开发版本控制系统，学习它是大大的好
 
 <!--more-->
+
+# 配置 Git 与 Github 连接
+
+1.生成 SSH Key
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+2.把 SSH Key 加入 SSH 代理（可选）
+```bash
+eval $(ssh-agent -s)  #保证 ssh-agent 处于运行中
+ssh-add ~/.ssh/id_rsa
+```
+
+3.将 .ssh/id_rsa.pub 文件内的内容粘贴至个人Github配置中去。
+
+（Settings -> SSH and GPG keys -> New SSH key）
+
+4.连接测试
+```bash
+ssh -T your_email@example.com
+```
 
 # Git 基本术语
 
