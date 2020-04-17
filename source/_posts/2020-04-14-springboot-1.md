@@ -1,5 +1,5 @@
 ---
-title: springboot_1
+title: Springboot 入门杂谈（Springboot 编程思想1～4章小结）
 date: 2020-04-14 23:40:03
 tags: springboot 
 ---
@@ -37,5 +37,74 @@ springboot 应用打包成 jar 包需要 `spring-boot-maven-plugin` 插件。
 
 springboot 既可以打包成 Jar 包，也可以打包成 War 包运行。打成 war 包的时候需要手动在 POM 文件添加 `spring-boot-loader`
 
+Springboot 的 Maven 固化依赖：
+```xml
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.5.RELEASE</version>
+    <relativePath/>
+</parent>
+```
 
-（未完待续）
+采用导入方式：
+```xml
+<dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>2.2.5.RELEASE</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+	</dependencies>
+</dependencyManagement>
+```
+
+Springboot 的 Web 编程范式有两大类：Servlet 和 Reactor
+
+```xml
+<!-- Servlet -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+<!-- Reactor -->
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-webflux</artifactId>
+</dependency>
+
+```
+
+Springboot 嵌入式容器主要有 `Tomcat`、`Jetty`、`Undertow`、`Reactor Netty` 四大类。前三类既可以用于 Servlet Web，也可以用于 Reactor Web；最后一类只能用用于 Reactor Web
+
+```xml
+<!-- Tomcat -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+</dependency>
+
+<!-- undertow -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-undertow</artifactId>
+</dependency>
+
+<!-- jetty -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jetty</artifactId>
+</dependency>
+
+<!-- netty Web Server -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-reactor-netty</artifactId>
+</dependency>
+```
+
+有实现需要学一些 Reactor Web

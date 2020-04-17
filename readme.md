@@ -7,6 +7,7 @@ hexo server
 ## 发布
 
 ```bash
+hexo g
 hexo deploy
 ```
 
