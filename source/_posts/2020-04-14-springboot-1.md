@@ -10,7 +10,15 @@ tags: springboot
 需要借助 Maven archetype 插件，从模板原型构建应用。
 
 ```bash
-mvn archetype:generate -B -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1 -DgroupId=com.company -DartifactId=project -Dversion=1.0-SNAPSHOT -Dpackage=com.company.project
+mvn archetype:generate\
+ -B\
+ -DarchetypeGroupId=org.apache.maven.archetypes\
+ -DarchetypeArtifactId=maven-archetype-quickstart\
+ -DarchetypeVersion=1.1\
+ -DgroupId=com.company\
+ -DartifactId=project\
+ -Dversion=1.0-SNAPSHOT\
+ -Dpackage=com.company.project
 ```
 
 查看依赖树
@@ -40,25 +48,25 @@ springboot 既可以打包成 Jar 包，也可以打包成 War 包运行。打�
 Springboot 的 Maven 固化依赖：
 ```xml
 <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.5.RELEASE</version>
-    <relativePath/>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>2.2.5.RELEASE</version>
+  <relativePath/>
 </parent>
 ```
 
 采用导入方式：
 ```xml
 <dependencyManagement>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-dependencies</artifactId>
-			<version>2.2.5.RELEASE</version>
-			<type>pom</type>
-			<scope>import</scope>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-dependencies</artifactId>
+      <version>2.2.5.RELEASE</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
 </dependencyManagement>
 ```
 
