@@ -6,6 +6,8 @@ tags: springboot
 
 Springboot 门面注解：`@SpringBootApplication`
 
+<!--more-->
+
 `@SpringBootApplication` 继承了以下三个注解，并通过 `@AliasFor` 代理了被继承注解的一些值设置：
 
 ```java
@@ -77,4 +79,12 @@ AnyNestedCondition
 NoneNestedConditions
 ```
 
-（未完待续）
+Springboot 5大特性：
++ SpringApplication
++ 自动装配外部配置化
++ Springboot Actuator
++ 嵌入式 Web 容器
+
+这块需要看官方文档才能理解
+
+12 Factor: <http://12factor.net>

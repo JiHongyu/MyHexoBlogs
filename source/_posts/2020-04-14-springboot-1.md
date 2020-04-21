@@ -9,6 +9,8 @@ tags: springboot
 
 需要借助 Maven archetype 插件，从模板原型构建应用。
 
+<!--more-->
+
 ```bash
 mvn archetype:generate\
  -B\
