@@ -90,3 +90,6 @@ jsonContent:
       excerpt: false
       categories: true
       tags: true
+
+tag_plantuml:
+  type: static

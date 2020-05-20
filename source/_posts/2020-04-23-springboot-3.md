@@ -4,8 +4,6 @@ date: 2020-04-23 23:05:19
 tags: springboot
 ---
 
-<!--more-->
-
 ## 注解驱动发展史（不同 Spring 阶段的注解）
 
 ### Spring Framework 1.X
@@ -15,6 +13,9 @@ tags: springboot
 ### Spring Framework 2.0
 
 @Required、@Repository
+
+<!--more-->
+
 
 ### Spring Framework 2.5
 
@@ -85,5 +86,4 @@ AnnotationAttributes：Spring 对注解属性的抽象，是基于 LinkedHashMap
 + 隐式覆盖：子类同名注解覆盖父类同名注解
 + 显示覆盖：`@AliasFor` 指定覆盖
 
-Spring 元注解之前最好不要互相标注，这个问题后面可以研究一下。
 Spring 元注解之前最好不要互相标注，这个问题后面可以研究一下。
